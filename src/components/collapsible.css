@@ -1,0 +1,11 @@
+.Collapsible__Article {
+  overflow: hidden;
+}
+
+.Collapsible__Article--close {
+  height: 250px;
+}
+
+.Collapsible__Article--open {
+  height: 100%;
+}
