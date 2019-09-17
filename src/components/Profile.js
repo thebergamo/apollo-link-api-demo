@@ -9,7 +9,7 @@ const Profile = character => (
     <section>
       <h3>Description</h3>
       <Collapsible content={character.description} showMax={50} />
-      <Giphy />
+      <Giphy search={character.name.first || character.name.full} />
     </section>
   </section>
 );

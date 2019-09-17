@@ -13,9 +13,7 @@ const httpLink = new HttpLink({ uri: ANILIST_API });
 const restLink = new RestLink({
   uri: GIPHY_API,
   typePatcher: {
-    GifPayload: (data, outerType, patchDeeper) => {
-      console.log("DA", data);
-
+    GifPayload: data => {
       return {
         results: data.data.map(gif => ({ __typename: "GifPayload", ...gif }))
       };

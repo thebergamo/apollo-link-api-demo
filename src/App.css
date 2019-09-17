@@ -10,6 +10,8 @@
 
 .App-header {
   background-color: #282c34;
+  background-image: url("./images/background.jpg");
+  background-size: cover;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -21,6 +23,23 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.App-back {
+  background-color: "aquamarine";
+  font-size: 1.5rem;
+  margin: 15px;
+}
+
+input {
+  font-size: 3rem;
+  border-radius: 25px;
+  padding: 5px;
+  padding-left: 15px;
+}
+
+input::placeholder {
+  font-size: 2rem;
 }
 
 @keyframes App-logo-spin {

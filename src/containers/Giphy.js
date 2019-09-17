@@ -5,7 +5,7 @@ import { SEARCH_GIF } from "../graphql/giphy";
 
 function Giphy({ search, charName }) {
   const { loading, data } = useQuery(SEARCH_GIF, {
-    variables: { query: "Goku" }
+    variables: { query: search }
   });
 
   console.log(data);
@@ -15,7 +15,9 @@ function Giphy({ search, charName }) {
       <h3>{charName} GIFs</h3>
       {data &&
         data.search &&
-        data.search.results.map(({ embed_url }) => <img src={embed_url} />)}
+        data.search.results.map(({ embed_url }) => (
+          <iframe key={embed_url} src={embed_url} allowFullScreen></iframe>
+        ))}
     </section>
   );
 }
